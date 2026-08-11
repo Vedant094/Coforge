@@ -1,0 +1,43 @@
+{
+  "flights": [
+    { "id": 1, "flightNumber": "AI202", "airline": "Air India", "origin": "DEL", "destination": "JFK", "departureTime": "2026-08-08T09:30:00", "gate": "B12", "terminal": "T3", "status": "ON_TIME" },
+    { "id": 2, "flightNumber": "6E345", "airline": "IndiGo", "origin": "DEL", "destination": "BOM", "departureTime": "2026-08-08T11:15:00", "gate": "A04", "terminal": "T1", "status": "BOARDING" },
+    { "id": 3, "flightNumber": "UA118", "airline": "United", "origin": "DEL", "destination": "ORD", "departureTime": "2026-08-08T14:45:00", "gate": "C09", "terminal": "T3", "status": "DELAYED" },
+    { "id": 4, "flightNumber": "EK512", "airline": "Emirates", "origin": "DEL", "destination": "DXB", "departureTime": "2026-08-08T07:20:00", "gate": "D02", "terminal": "T3", "status": "ON_TIME" },
+    { "id": 5, "flightNumber": "LH760", "airline": "Lufthansa", "origin": "DEL", "destination": "FRA", "departureTime": "2026-08-08T23:10:00", "gate": "B07", "terminal": "T3", "status": "ON_TIME" },
+    { "id": 6, "flightNumber": "SQ403", "airline": "Singapore Airlines", "origin": "DEL", "destination": "SIN", "departureTime": "2026-08-08T02:40:00", "gate": "A11", "terminal": "T3", "status": "ON_TIME" }
+  ],
+  "passengers": [
+    { "id": 1, "fullName": "Rohan Mehta", "passportNumber": "P1234567", "preferredLang": "hi" },
+    { "id": 2, "fullName": "Maria Gonzalez", "passportNumber": "P7654321", "preferredLang": "es" },
+    { "id": 3, "fullName": "John Smith", "passportNumber": "P1122334", "preferredLang": "en" },
+    { "id": 4, "fullName": "Aiko Tanaka", "passportNumber": "P9988776", "preferredLang": "ja" },
+    { "id": 5, "fullName": "Fatima Noor", "passportNumber": "P5566778", "preferredLang": "ar" }
+  ],
+  "bookings": [
+    { "id": 1, "pnr": "ABC123", "passengerId": 1, "flightId": 1, "checkedIn": false, "seatNumber": null, "bagCount": 1, "boardingPassIssued": false },
+    { "id": 2, "pnr": "XYZ789", "passengerId": 2, "flightId": 2, "checkedIn": false, "seatNumber": null, "bagCount": 2, "boardingPassIssued": false },
+    { "id": 3, "pnr": "QWE456", "passengerId": 3, "flightId": 3, "checkedIn": true, "seatNumber": "14C", "bagCount": 1, "boardingPassIssued": true },
+    { "id": 4, "pnr": "JKL321", "passengerId": 4, "flightId": 4, "checkedIn": false, "seatNumber": null, "bagCount": 0, "boardingPassIssued": false },
+    { "id": 5, "pnr": "MNO654", "passengerId": 5, "flightId": 5, "checkedIn": false, "seatNumber": null, "bagCount": 3, "boardingPassIssued": false }
+  ],
+  "seats": [
+    { "id": 1, "flightId": 1, "seatNumber": "1A", "seatClass": "BUSINESS", "available": true, "upgradePrice": 250.00 },
+    { "id": 2, "flightId": 1, "seatNumber": "1B", "seatClass": "BUSINESS", "available": true, "upgradePrice": 250.00 },
+    { "id": 3, "flightId": 1, "seatNumber": "12A", "seatClass": "PREMIUM_ECONOMY", "available": true, "upgradePrice": 80.00 },
+    { "id": 4, "flightId": 1, "seatNumber": "12B", "seatClass": "PREMIUM_ECONOMY", "available": false, "upgradePrice": 80.00 },
+    { "id": 5, "flightId": 1, "seatNumber": "20A", "seatClass": "ECONOMY", "available": true, "upgradePrice": 0.00 },
+    { "id": 6, "flightId": 1, "seatNumber": "20B", "seatClass": "ECONOMY", "available": true, "upgradePrice": 0.00 },
+    { "id": 7, "flightId": 1, "seatNumber": "20C", "seatClass": "ECONOMY", "available": false, "upgradePrice": 0.00 },
+    { "id": 8, "flightId": 1, "seatNumber": "21A", "seatClass": "ECONOMY", "available": true, "upgradePrice": 0.00 }
+  ],
+  "baggagePolicies": [
+    { "id": 1, "airline": "Air India", "classType": "ECONOMY", "freeBagCount": 1, "freeWeightKg": 23, "extraBagFee": 60.00, "overweightFee": 100.00 },
+    { "id": 2, "airline": "Air India", "classType": "BUSINESS", "freeBagCount": 2, "freeWeightKg": 32, "extraBagFee": 60.00, "overweightFee": 100.00 },
+    { "id": 3, "airline": "IndiGo", "classType": "ECONOMY", "freeBagCount": 1, "freeWeightKg": 15, "extraBagFee": 45.00, "overweightFee": 80.00 },
+    { "id": 4, "airline": "United", "classType": "ECONOMY", "freeBagCount": 1, "freeWeightKg": 23, "extraBagFee": 65.00, "overweightFee": 100.00 },
+    { "id": 5, "airline": "Emirates", "classType": "ECONOMY", "freeBagCount": 2, "freeWeightKg": 23, "extraBagFee": 70.00, "overweightFee": 120.00 },
+    { "id": 6, "airline": "Lufthansa", "classType": "ECONOMY", "freeBagCount": 1, "freeWeightKg": 23, "extraBagFee": 60.00, "overweightFee": 100.00 },
+    { "id": 7, "airline": "Singapore Airlines", "classType": "ECONOMY", "freeBagCount": 1, "freeWeightKg": 23, "extraBagFee": 65.00, "overweightFee": 100.00 }
+  ]
+}

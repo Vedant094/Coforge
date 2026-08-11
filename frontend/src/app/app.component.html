@@ -1,0 +1,41 @@
+<div class="kiosk">
+  <header class="kiosk-header">
+    <div class="logo-dot"></div>
+    <h1>Airport Kiosk Assistant</h1>
+    <span class="tagline">Speak or type in your language</span>
+  </header>
+
+  <main class="chat-panel">
+    <div class="messages">
+      <div *ngFor="let m of messages" class="message" [class.user]="m.sender === 'user'" [class.bot]="m.sender === 'bot'">
+        <div class="bubble">{{ m.text }}</div>
+      </div>
+      <div *ngIf="isLoading" class="message bot">
+        <div class="bubble loading">Thinking…</div>
+      </div>
+    </div>
+
+    <div class="data-card" *ngIf="lastData && lastIntent">
+      <h3>{{ lastIntent | uppercase }}</h3>
+      <pre>{{ lastData | json }}</pre>
+    </div>
+
+    <div class="input-row">
+      <button
+        class="mic-btn"
+        [class.listening]="isListening"
+        [disabled]="!voiceSupported"
+        (click)="startListening()"
+        [title]="voiceSupported ? 'Tap to speak' : 'Voice not supported in this browser'">
+        🎙️
+      </button>
+      <input
+        type="text"
+        [(ngModel)]="userInput"
+        (keyup.enter)="sendText()"
+        placeholder="Type your message..."
+        class="text-input">
+      <button class="send-btn" (click)="sendText()">Send</button>
+    </div>
+  </main>
+</div>
